@@ -14,10 +14,10 @@ public class ConfiguracionApplication {
 	}
 
 	@Bean
-	CommandLineRunner execute(Environment environment){
+	CommandLineRunner execute(SaludoConfiguration saludoConfiguration){
 		return args -> {
-			System.out.println(environment.getProperty("saludo.corto"));
-			System.out.println(environment.getProperty("saludo.largo"));
+			System.out.println(saludoConfiguration.getCorto());
+			System.out.println(saludoConfiguration.getLargo());
 		};
 	}
 
