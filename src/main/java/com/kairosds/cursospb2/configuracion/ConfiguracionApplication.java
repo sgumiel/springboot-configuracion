@@ -4,7 +4,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.core.env.Environment;
 
 @SpringBootApplication
 public class ConfiguracionApplication {
@@ -14,10 +13,13 @@ public class ConfiguracionApplication {
 	}
 
 	@Bean
-	CommandLineRunner execute(SaludoConfiguration saludoConfiguration){
+	CommandLineRunner execute(SaludoMayusculasConfiguration saludoMayusculasConfiguration,
+							  SaludoMinusculasConfiguration saludoMinusculasConfiguration){
 		return args -> {
-			System.out.println(saludoConfiguration.getCorto());
-			System.out.println(saludoConfiguration.getLargo());
+			System.out.println(saludoMayusculasConfiguration.getCorto());
+			System.out.println(saludoMayusculasConfiguration.getLargo());
+			System.out.println(saludoMinusculasConfiguration.getCorto());
+			System.out.println(saludoMinusculasConfiguration.getLargo());
 		};
 	}
 

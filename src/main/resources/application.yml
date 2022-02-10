@@ -1,3 +1,7 @@
 saludo:
-  corto: hola
-  largo: hola, que tal
+  mayusculas:
+    corto: HOLA
+    largo: HOLA QUE TAL
+  minusculas:
+    corto: hola
+    largo: hola, que tal
